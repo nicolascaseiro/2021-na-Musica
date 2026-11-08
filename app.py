@@ -59,7 +59,7 @@ df_tabela['Data do Álbum'] = pd.to_datetime(df_tabela['Data do Álbum'], errors
 df_tabela['Mês'] = df_tabela['Data do Álbum'].dt.month.apply(lambda x: meses_pt[x-1] if pd.notna(x) else None)
 total_musicas_filtradas = df_tabela['Música'].nunique()
 
-st.title("Dashboard 2023 na Música")
+st.title("Dashboard 2021 na Música")
 
 col1, col2, col3, col4 = st.columns(4)
 col1.metric("Total de músicas", total_musicas_filtradas)
